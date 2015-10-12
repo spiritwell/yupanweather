@@ -20,14 +20,14 @@ public class YuPanWeatherDB {
 	/**
 	 * 数据库名
 	 */
-	public static final String DB_NAME = "cool_weather";
+	public static final String DB_NAME = "yupan_weather";
 
 	/**
 	 * 版本号
 	 */
 	public static final int VERSION = 1;
 
-	private static YuPanWeatherDB coolWeatherDB;
+	private static YuPanWeatherDB yupanWeatherDB;
 
 	private SQLiteDatabase db;
 
@@ -44,10 +44,10 @@ public class YuPanWeatherDB {
 	 * 获取CoolWeatherDB的实例
 	 */
 	public synchronized static YuPanWeatherDB getInstance(Context context) {
-		if (coolWeatherDB == null) {
-			coolWeatherDB = new YuPanWeatherDB(context);
+		if (yupanWeatherDB == null) {
+			yupanWeatherDB = new YuPanWeatherDB(context);
 		}
-		return coolWeatherDB;
+		return yupanWeatherDB;
 	}
 	
 	
