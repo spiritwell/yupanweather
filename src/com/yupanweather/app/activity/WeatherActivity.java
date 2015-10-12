@@ -4,6 +4,7 @@ package com.yupanweather.app.activity;
 
 import com.yupanweather.app.activity.ChooseAreaActivity;
 import com.example.yupanweather.R;
+import com.yupanweather.app.service.AutoUpdateService;
 import com.yupanweather.app.util.HttpCallbackListener;
 import com.yupanweather.app.util.HttpUtil;
 import com.yupanweather.app.util.Utility;
@@ -187,7 +188,7 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
 		
-	/*	Intent intent = new Intent(this, AutoUpdateService.class);
-		startService(intent);*/
+		Intent intent = new Intent(this, AutoUpdateService.class);
+		startService(intent);
 	}
 }

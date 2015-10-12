@@ -26,6 +26,9 @@
             </intent-filter>
         </activity>
         <activity android:name="com.yupanweather.app.activity.WeatherActivity"></activity>
+        
+          <service android:name="com.yupanweather.app.service.AutoUpdateService"></service>
+        <receiver android:name="com.yupanweather.app.receiver.AutoUpdateReceiver"></receiver>
     </application>
 
 </manifest>
